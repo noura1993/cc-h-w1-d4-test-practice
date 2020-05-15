@@ -23,3 +23,8 @@ def total_amount_of_money(people)
   people.each{ |person| total += person[:monies]}
   return total
 end
+
+def loan_money(lender, lendee, amount)
+lender[:monies] -= amount
+lendee[:monies] += amount
+end
