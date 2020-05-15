@@ -97,14 +97,18 @@ class TestFriends < MiniTest::Test
   # (e.g. the function add_friend(@person2, "Scrappy-Doo") should add Scrappy-Doo to the friends.)
   # (hint: This function should not return anything. After the function call, check for the length of the friends array to test it!)
   def test_add_new_friend
-    array_length = add_new_friend(@person1, "keara").length
+    array_length = add_new_friend(@person1, "Keara").length
     assert_equal(5, array_length)
   end
 
 
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
-
+  def test_remove_friend
+    remove_friend(@person4, "Velma")
+    array_length = @person4[:friends].length
+    assert_equal(2, array_length)
+  end
 
   # 6. Find the total of everyone's money
   # (hint: use the @people array, remember how we checked the total number of eggs yesterday?)

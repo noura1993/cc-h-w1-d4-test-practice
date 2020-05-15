@@ -13,3 +13,7 @@ end
 def add_new_friend(person, friend)
   person[:friends].push(friend)
 end
+
+def remove_friend(person, friend)
+  person[:friends].delete(friend)
+end
