@@ -34,3 +34,9 @@ def join_favourite_food(people)
   people.each{ |person| total += person[:favourites][:snacks]}
   return total
 end
+
+def people_with_no_friends(people)
+  total = []
+  people.each{ |person| total.push(person) if person[:friends].empty?}
+  return total
+end
