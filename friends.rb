@@ -25,6 +25,12 @@ def total_amount_of_money(people)
 end
 
 def loan_money(lender, lendee, amount)
-lender[:monies] -= amount
-lendee[:monies] += amount
+  lender[:monies] -= amount
+  lendee[:monies] += amount
+end
+
+def join_favourite_food(people)
+  total = []
+  people.each{ |person| total += person[:favourites][:snacks]}
+  return total
 end
